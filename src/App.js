@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Navbar, Row, Col } from "react-bootstrap";
-import AddBook from "./components/AddBook";
+import AddBook from "./components/AddBook/AddBook";
 import BooksList from "./components/BooksList";
 import "./App.css";
 
@@ -13,11 +13,9 @@ function App() {
   };
   return (
     <>
-      <Navbar bg="dark" variant="dark" className="header">
-        <Container>
-          <Navbar.Brand href="#home">Library Management - Firebase CRUD ️‍🔥</Navbar.Brand>
-        </Container>
-      </Navbar>
+      <nav className="header">
+          <h1 className="head">Library Management - Firebase CRUD ️‍🔥</h1>
+      </nav>
 
       <Container style={{ width: "400px" }}>
         <Row>

@@ -1,5 +1,30 @@
-.header .container {
+.header{
+  display: flex;
   justify-content: center;
+  background-color: #282c34;
+  height: 4rem;
+  align-items: center;
+}
+@media (max-width:768px) {
+  .header{
+    display: flex;
+    justify-content: center;
+    background-color: #282c34;
+    height: 4rem;
+    align-items: center;
+    width:115%;
+  }
+}
+
+.head{
+  color: rgb(247, 245, 243);
+  font-size: 1.5rem;
+}
+@media (max-width:768px) {
+  .head{
+    color: rgb(247, 245, 243);
+    font-size: 1rem;
+  }
 }
 .input-group-text {
   background-color: #212529;

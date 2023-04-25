@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Form, Alert, InputGroup, Button, ButtonGroup } from "react-bootstrap";
-import BookDataService from "../services/book.services";
+import { Alert } from "react-bootstrap";
+import BookDataService from '../../services/book.services'
+import './AddBook.css'
 
 const AddBook = ({ id, setBookId }) => {
   const [title, setTitle] = useState("");
@@ -62,7 +63,7 @@ const AddBook = ({ id, setBookId }) => {
   }, [id]);
   return (
     <>
-      <div className="p-4 box">
+      <div className="main-container">
         {message?.msg && (
           <Alert
             variant={message?.error ? "danger" : "success"}
@@ -73,58 +74,54 @@ const AddBook = ({ id, setBookId }) => {
           </Alert>
         )}
 
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBookTitle">
-            <InputGroup>
-              <InputGroup.Text id="formBookTitle">B</InputGroup.Text>
-              <Form.Control
+        <form className="form" onSubmit={handleSubmit}>
+
+            <div className="inputs">
+                <label id="formBookTitle">Book Title</label>
+                <input 
                 type="text"
-                placeholder="Book Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-              />
-            </InputGroup>
-          </Form.Group>
+                placeholder="Enter Book Title" className="input" />
+            </div>
 
-          <Form.Group className="mb-3" controlId="formBookAuthor">
-            <InputGroup>
-              <InputGroup.Text id="formBookAuthor">A</InputGroup.Text>
-              <Form.Control
+            <div className="inputs">
+                <label id="formBookAuthor">Author Name</label>
+                <input 
                 type="text"
-                placeholder="Book Author"
+                placeholder="Author Name"
                 value={author}
-                onChange={(e) => setAuthor(e.target.value)}
-              />
-            </InputGroup>
-          </Form.Group>
-          <ButtonGroup aria-label="Basic example" className="mb-3">
-            <Button
+                onChange={(e) => setAuthor(e.target.value)} className="input" />
+            </div>
+
+          <div className="buttons mb-3">
+            <button
               disabled={flag}
-              variant="success"
               onClick={(e) => {
                 setStatus("Available");
                 setFlag(true);
               }}
+              className="avl-btn"
             >
               Available
-            </Button>
-            <Button
-              variant="danger"
+            </button>
+            <button
               disabled={!flag}
               onClick={(e) => {
                 setStatus("Not Available");
                 setFlag(false);
               }}
+              className="not-avl-btn"
             >
               Not Available
-            </Button>
-          </ButtonGroup>
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
-              Add/ Update
-            </Button>
+            </button>
           </div>
-        </Form>
+          <div className="add-cont">
+            <button className="add-btn"  type="Submit">
+              Add/ Update
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );

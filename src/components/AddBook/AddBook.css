@@ -1,0 +1,152 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: rgb(245, 243, 240);
+    padding: 2rem;
+    margin: 2rem 0 2rem 0;
+    border: 2px solid rgb(236, 228, 228);
+    border-radius: 10%;
+}
+
+@media (max-width:768px) {
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80%;
+        background-color: rgb(245, 243, 240);
+        padding: 1rem;
+        border: 2px solid rgb(236, 228, 228);
+        border-radius: 10%;
+    }
+}
+
+@media (max-width:768px) {
+    .inputs{
+        margin: 0.5rem 0 0.5rem 0;
+    }
+}
+.inputs{
+    margin: 1rem 0 1rem 0;
+}
+
+.input {
+    width: 100%;
+    max-width: 220px;
+    height: 45px;
+    padding: 12px;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+    border: 2px solid lightgrey;
+
+  }
+  
+  .input:hover {
+    box-shadow: 0px 0px 20px -17px;
+  }
+  
+  .input:active {
+    transform: scale(0.95);
+  }
+  
+  .input:focus {
+    border: 2px solid grey;
+  }
+
+  .buttons{
+    align-self: center;
+    padding: 12px;
+  }
+
+
+ 
+  
+
+  .avl-btn {
+    font-size: 17px;
+    padding: 0.4em 1.7em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: rgb(30, 255, 79);
+    color: white;
+    border-radius: 4px;
+   }
+
+   @media (max-width:768px) {
+    .avl-btn {
+        font-size: 13px;
+        padding: 0.4em 1.5em;
+    }
+    }
+   
+   .avl-btn:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(15, 126, 43) 0%, rgb(0, 255, 98) 100%);
+   }
+   
+   .avl-btn:active {
+    transform: translate(0em, 0.2em);
+   }
+
+   .not-avl-btn {
+    font-size: 17px;
+    padding: 0.4em 1.7em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: rgb(255, 30, 49);
+    color: white;
+    border-radius: 4px;
+   }
+   @media (max-width:768px) {
+    .not-avl-btn {
+        font-size: 13px;
+        padding: 0.4em 1.5em;
+    }
+    }
+   
+   .not-avl-btn:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(192, 66, 44) 0%, rgb(255, 64, 30) 100%);
+   }
+   
+   .not-avl-btn:active {
+    transform: translate(0em, 0.2em);
+   }
+
+   .add-cont{
+    align-self: center;
+   }
+
+   .add-btn {
+    color: antiquewhite;
+    padding: 15px;
+    border-radius: 9px;
+    background: #599cff;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+   }
+   
+   .add-btn:hover {
+    box-shadow: 7px 5px 56px -14px #17697e;
+   }
+   
+   .add-btn:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #17697e;
+   }
