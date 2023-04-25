@@ -22,7 +22,7 @@ const BooksList = ({ getBookId }) => {
     <>
       <div className="mb-2">
         <Button variant="dark edit" onClick={getBooks}>
-          Refresh List
+          Refresh List ↻
         </Button>
       </div>
 
